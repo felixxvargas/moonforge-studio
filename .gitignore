@@ -1,0 +1,3 @@
+node_modules/
+generate-assets.mjs
+package*.json

@@ -197,7 +197,7 @@ header {
 
 .hero h1 {
   font-size: clamp(64px, 10vw, 120px);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.02;
   letter-spacing: -3px;
   color: var(--text);
@@ -206,8 +206,7 @@ header {
   text-align: left;
 }
 
-.hero h1 em {
-  font-style: italic;
+.hero-accent {
   font-weight: 800;
   color: var(--accent);
   filter: drop-shadow(0 0 24px rgba(137,254,155,0.45));
@@ -219,7 +218,7 @@ header {
   line-height: 1.6;
   margin: 0 auto 36px;
   max-width: 480px;
-  text-align: center;
+  text-align: left;
 }
 
 .btn-primary {
@@ -1025,7 +1024,7 @@ footer {
 
 @media (max-width: 640px) {
   .header-inner { padding: 0 24px; }
-  .hero, .team-hero { padding: 60px 24px 80px; }
+  .hero, .team-hero { padding: 60px px 80px; }
   .hero h1 { letter-spacing: -2px; }
   .btn-secondary { display: flex; width: 100%; justify-content: center; }
   .home-container { padding: 0 24px; }
