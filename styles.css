@@ -203,10 +203,12 @@ header {
   color: var(--text);
   margin-bottom: 28px;
   filter: drop-shadow(0 0 40px rgba(137,254,155,0.18));
+  text-align: left;
 }
 
 .hero h1 em {
   font-style: italic;
+  font-weight: 800;
   color: var(--accent);
   filter: drop-shadow(0 0 24px rgba(137,254,155,0.45));
 }
@@ -215,8 +217,9 @@ header {
   font-size: 18px;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 36px;
+  margin: 0 auto 36px;
   max-width: 480px;
+  text-align: center;
 }
 
 .btn-primary {
@@ -457,14 +460,16 @@ header {
 
 /* ─── SERVICES GRID ───────────────────── */
 .services-section {
-  padding: 64px 32px;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  padding: 0 32px 64px;
 }
 
 .services-inner {
-  max-width: 1200px;
+  max-width: 920px;
   margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 40px;
 }
 
 .services-section h2 {
@@ -988,18 +993,20 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .header-inner { padding: 0 20px; }
-  .hero, .team-hero { padding: 60px 20px 80px; }
+  .header-inner { padding: 0 24px; }
+  .hero, .team-hero { padding: 60px 24px 80px; }
   .hero h1 { letter-spacing: -2px; }
-  .btn-secondary { width: 100%; justify-content: center; }
-  .home-container { padding: 0 20px; }
+  .btn-secondary { display: flex; width: 100%; justify-content: center; }
+  .home-container { padding: 0 24px; }
   .projects-grid { grid-template-columns: 1fr; }
-  .services-section, .team-cta { padding: 60px 20px; }
-  .team-hero, .team-grid { padding-left: 20px; padding-right: 20px; }
-  .contact-main { padding: 60px 20px; }
-  .contact-form-card { padding: 28px 20px; }
-  .featured-avatar-wrap { padding: 28px 28px 0; }
-  .featured-info { padding: 24px 28px 28px; }
-  footer { padding: 36px 20px; }
+  .services-section { padding: 0 24px 48px; }
+  .services-inner { padding: 32px 24px; border-radius: 12px; }
+  .team-cta { padding: 60px 24px; }
+  .team-hero, .team-grid { padding-left: 24px; padding-right: 24px; }
+  .contact-main { padding: 60px 24px; }
+  .contact-form-card { padding: 28px 24px; }
+  .featured-avatar-wrap { padding: 28px 24px 0; }
+  .featured-info { padding: 24px 24px 28px; }
+  footer { padding: 36px 24px; }
   .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
 }
