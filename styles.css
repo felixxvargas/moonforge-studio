@@ -581,7 +581,7 @@ header {
 /* ─── TEAM PAGE ───────────────────────── */
 .team-hero {
   position: relative;
-  padding: 100px 32px 80px;
+  padding: 100px 240px 80px;
   overflow: hidden;
 }
 
@@ -1015,6 +1015,10 @@ footer {
 }
 
 /* ─── RESPONSIVE ──────────────────────── */
+@media (min-width: 960px) {
+  .team-hero { padding: 0px 0px 180px 80px; }
+}
+
 @media (max-width: 900px) {
   .services-grid { justify-content: center; }
   .team-grid { grid-template-columns: 1fr; }
@@ -1024,7 +1028,7 @@ footer {
 
 @media (max-width: 640px) {
   .header-inner { padding: 0 24px; }
-  .hero, .team-hero { padding: 60px px 80px; }
+  .hero, .team-hero { padding: 60px 0px 80px; }
   .hero h1 { letter-spacing: -2px; }
   .btn-secondary { display: flex; width: 100%; justify-content: center; }
   .home-container { padding: 0 24px; }
