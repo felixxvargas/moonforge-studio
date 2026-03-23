@@ -51,7 +51,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content home-container" style="text-align:center;">
       <h1>Crafting<br>Digital<br><em>Luminance.</em></h1>
       <p>We forge immersive experiences under the moonlight that spark wonder and awe.</p>
       <a href="contact.html" class="btn-secondary">Contact Us</a>
@@ -59,7 +59,7 @@
   </section>
 
   <!-- FILTER BAR -->
-  <div class="filter-bar">
+  <div class="filter-bar home-container">
     <button class="filter-btn active" data-filter="all">All Projects</button>
     <button class="filter-btn" data-filter="app">Apps</button>
     <button class="filter-btn" data-filter="web">Web</button>
@@ -67,48 +67,43 @@
 
   <!-- PROJECTS -->
   <section class="projects-section">
-    <div class="projects-grid">
+    <div class="home-container">
+      <div class="projects-grid">
 
-      <!-- Project 1: Forge -->
-      <div class="project-card" data-type="app">
-        <div class="project-thumb project-thumb-forge">
-          <div class="project-badge badge-app">App</div>
-          <div style="position:relative;z-index:1;display:flex;align-items:center;gap:8px;">
-            <div class="feature-icon" style="width:32px;height:32px;margin:0;border-radius:6px;background:#89fe9b;display:flex;align-items:center;justify-content:center;">
-              <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                <path d="M9 2L11 7H16L12 10.5L13.5 15.5L9 12.5L4.5 15.5L6 10.5L2 7H7L9 2Z" fill="#0c0e0b"/>
-              </svg>
+        <!-- Project 1: Forge -->
+        <div class="project-card" data-type="app">
+          <div class="project-thumb project-thumb-forge">
+            <div class="project-badge badge-app">App</div>
+            <img src="image/forge-app.png" alt="Forge app" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="project-info">
+            <div class="project-title">Forge</div>
+            <div class="project-desc">A Converged Social Media And Gaming Infrastructure.</div>
+            <a href="https://moonforge.app" target="_blank" rel="noopener" class="project-link">View Project
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Sixth Sense -->
+        <div class="project-card" data-type="web">
+          <div class="project-thumb project-thumb-sixth">
+            <div class="project-badge badge-web">Website</div>
+            <div style="position:relative;z-index:1;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;color:#c4a0d8;text-align:center;">
+              <div style="font-size:10px;letter-spacing:0.12em;opacity:0.7;margin-bottom:3px;">SIXTH</div>
+              <div style="font-size:18px;">SENSE</div>
             </div>
-            <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#89fe9b;">Forge</span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Sixth Sense</div>
+            <div class="project-desc">Professional Music Licensing Reimagined.</div>
+            <a href="https://sixthsensemgmt.com" target="_blank" rel="noopener" class="project-link">View Project
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </a>
           </div>
         </div>
-        <div class="project-info">
-          <div class="project-title">Forge</div>
-          <div class="project-desc">A Converged Social Media And Gaming Infrastructure.</div>
-          <a href="#" class="project-link">View Project
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          </a>
-        </div>
-      </div>
 
-      <!-- Project 2: Sixth Sense -->
-      <div class="project-card" data-type="web">
-        <div class="project-thumb project-thumb-sixth">
-          <div class="project-badge badge-web">Website</div>
-          <div style="position:relative;z-index:1;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;color:#c4a0d8;text-align:center;">
-            <div style="font-size:10px;letter-spacing:0.12em;opacity:0.7;margin-bottom:3px;">SIXTH</div>
-            <div style="font-size:18px;">SENSE</div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="project-title">Sixth Sense</div>
-          <div class="project-desc">Professional Music Licensing Reimagined.</div>
-          <a href="#" class="project-link">View Project
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          </a>
-        </div>
       </div>
-
     </div>
   </section>
 
@@ -165,8 +160,9 @@
       <div class="footer-top">
         <a href="index.html" class="logo">
           <div class="logo-icon">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 1L9 5L13 5.5L10 8.5L10.5 13L7 11L3.5 13L4 8.5L1 5.5L5 5L7 1Z" fill="#0c0e0b"/>
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="11" r="8" fill="#0c0e0b"/>
+              <circle cx="13" cy="8" r="6" fill="#89FE9B"/>
             </svg>
           </div>
           Moonforge

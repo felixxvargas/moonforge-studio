@@ -177,9 +177,13 @@ header {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+}
+
+/* ─── CENTERED HOME CONTAINER ─────────── */
+.home-container {
+  max-width: 920px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 48px;
 }
 
 /* text glow halo sitting directly behind the headline */
@@ -304,9 +308,7 @@ header {
 
 /* ─── FILTER BAR ──────────────────────── */
 .filter-bar {
-  padding: 20px 32px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 20px 0 40px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -341,14 +343,12 @@ header {
 
 /* ─── PROJECTS GRID ───────────────────── */
 .projects-section {
-  padding: 0 32px 80px;
+  padding: 0 0 80px;
 }
 
 .projects-grid {
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -993,7 +993,7 @@ footer {
   .hero, .team-hero { padding: 60px 20px 80px; }
   .hero h1 { letter-spacing: -2px; }
   .btn-secondary { width: 100%; justify-content: center; }
-  .projects-section, .filter-bar { padding-left: 20px; padding-right: 20px; }
+  .home-container { padding: 0 20px; }
   .projects-grid { grid-template-columns: 1fr; }
   .services-section, .team-cta { padding: 60px 20px; }
   .team-hero, .team-grid { padding-left: 20px; padding-right: 20px; }
