@@ -172,6 +172,7 @@ header {
   position: relative;
   padding: 100px 0 60px;
   overflow: hidden;
+  place-items: center;
 }
 
 .hero-content {
@@ -196,7 +197,7 @@ header {
 }
 
 .hero h1 {
-  font-size: clamp(64px, 10vw, 120px);
+  font-size: clamp(56px, 9vw, 80px);
   font-weight: 800;
   line-height: 1.02;
   letter-spacing: -3px;
@@ -581,8 +582,9 @@ header {
 /* ─── TEAM PAGE ───────────────────────── */
 .team-hero {
   position: relative;
-  padding: 100px 240px 80px;
+  padding: 100px 0px 80px;
   overflow: hidden;
+  place-items: center;
 }
 
 .team-hero-content {
@@ -592,7 +594,7 @@ header {
 }
 
 .team-hero h1 {
-  font-size: clamp(56px, 9vw, 110px);
+  font-size: clamp(56px, 9vw, 80px);
   font-weight: 700;
   letter-spacing: -3px;
   line-height: 1.02;
@@ -1015,10 +1017,6 @@ footer {
 }
 
 /* ─── RESPONSIVE ──────────────────────── */
-@media (min-width: 960px) {
-  .team-hero { padding: 0px 0px 180px 80px; }
-}
-
 @media (max-width: 900px) {
   .services-grid { justify-content: center; }
   .team-grid { grid-template-columns: 1fr; }
