@@ -170,14 +170,16 @@ header {
 /* ─── HERO ────────────────────────────── */
 .hero {
   position: relative;
-  padding: 100px 32px 60px;
+  padding: 100px 0 60px;
   overflow: hidden;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 /* text glow halo sitting directly behind the headline */
@@ -469,27 +471,31 @@ header {
   font-size: clamp(36px, 5vw, 60px);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   letter-spacing: -1.5px;
   line-height: 1.1;
+  text-align: center;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 0;
 }
 
 .service-card {
   background: #151a13;
   border: 1px solid rgba(137,254,155,0.12);
   border-radius: 8px;
-  padding: 20px 14px;
+  padding: 18px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: auto;
+  flex-shrink: 0;
   transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
 }
 
@@ -976,7 +982,7 @@ footer {
 
 /* ─── RESPONSIVE ──────────────────────── */
 @media (max-width: 900px) {
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { justify-content: center; }
   .team-grid { grid-template-columns: 1fr; }
   .contact-main { grid-template-columns: 1fr; gap: 40px; }
   .footer-top { flex-direction: column; gap: 16px; text-align: center; }
