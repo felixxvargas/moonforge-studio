@@ -476,7 +476,7 @@ header {
 }
 
 .services-section h2 {
-  font-size: clamp(36px, 5vw, 60px);
+  font-size: clamp(36px, 5vw, 44px);
   font-weight: 700;
   color: var(--text);
   margin-bottom: 24px;
@@ -547,7 +547,7 @@ header {
 }
 
 .team-cta h2 {
-  font-size: clamp(36px, 5vw, 60px);
+  font-size: clamp(36px, 5vw, 44px);
   font-weight: 700;
   letter-spacing: -1.5px;
   color: var(--text);
@@ -1026,7 +1026,7 @@ footer {
 
 @media (max-width: 640px) {
   .header-inner { padding: 0 24px; }
-  .hero, .team-hero { padding: 60px 0px 80px; }
+  .hero, .team-hero { padding: 60px 0px 24px; }
   .hero h1 { letter-spacing: -2px; }
   .btn-secondary { display: flex; width: 100%; justify-content: center; }
   .home-container { padding: 0 24px; }
