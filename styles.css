@@ -106,7 +106,8 @@ header {
   letter-spacing: -0.3px;
 }
 
-header .logo {
+header .logo,
+footer .logo {
   color: var(--accent);
 }
 
