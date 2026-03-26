@@ -9,6 +9,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-10PKJRPPYE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-10PKJRPPYE');
+  </script>
   <style>
     .team-hero h1 { filter: drop-shadow(0 0 36px rgba(137,254,155,0.16)); }
   </style>
@@ -26,12 +34,7 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <div class="logo-icon">
-            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="9" cy="11" r="8" fill="#0c0e0b"/>
-              <circle cx="13" cy="8" r="6" fill="#89FE9B"/>
-            </svg>
-          </div>
+        <img class="logo-icon" src="assets/moongforge-logo.svg" alt="" aria-hidden="true">
         Moonforge
       </a>
       <a href="contact.html" class="btn-contact">Contact</a>
@@ -59,8 +62,18 @@
         <p class="featured-role">Studio Director, UX Designer</p>
         <p class="featured-bio">Leading the creative direction for Moonforge, Felix harmonizes technical know-how with radiant aesthetics to build new worlds and products.</p>
         <div class="featured-links">
-          <a href="https://www.felixgiles.com">Portfolio</a>
-          <a href="htttps://www.linkedin.com/in/felixgiles">LinkedIn</a>
+          <a href="https://www.felixgiles.com" target="_blank" rel="noopener">Portfolio
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+              <path d="M4.5 2H2C1.45 2 1 2.45 1 3v6c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 1h3m0 0v3M10 1L5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/felixgiles" target="_blank" rel="noopener">LinkedIn
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+              <path d="M4.5 2H2C1.45 2 1 2.45 1 3v6c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 1h3m0 0v3M10 1L5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
           <a href="contact.html">Contact</a>
         </div>
       </div>
@@ -83,12 +96,7 @@
     <div class="footer-inner">
       <div class="footer-top">
         <a href="index.html" class="logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="9" cy="11" r="8" fill="#0c0e0b"/>
-              <circle cx="13" cy="8" r="6" fill="#89FE9B"/>
-            </svg>
-          </div>
+          <img class="logo-icon" src="assets/moongforge-logo.svg" alt="" aria-hidden="true">
           Moonforge
         </a>
         <span class="footer-copy">© 2026 Moonforge.</span>
