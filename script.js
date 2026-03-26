@@ -1,3 +1,7 @@
+// Always load at top of page (prevents browser scroll-restoration on mobile)
+if (history.scrollRestoration) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 // Project filter (home page)
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
@@ -16,32 +20,43 @@ filterBtns.forEach(btn => {
   });
 });
 
-// Contact form — submits to Formspree, shows toast on success
+// Touch shimmer animation for mobile (cards & buttons)
+if ('ontouchstart' in window) {
+  const shineTargets = document.querySelectorAll(
+    '.project-card, .service-card, .featured-card, .join-card, .tag-card, ' +
+    '.btn-primary, .btn-accent, .btn-contact, .btn-submit'
+  );
+  shineTargets.forEach(el => {
+    el.addEventListener('touchstart', () => {
+      el.classList.add('shine-active');
+      setTimeout(() => el.classList.remove('shine-active'), 700);
+    }, { passive: true });
+  });
+}
+
+// Contact form — submits to Supabase Edge Function, shows toast on success
+const CONTACT_ENDPOINT =
+  'https://xmxeafjpscgqprrreulh.supabase.co/functions/v1/contact-submit';
+
 const form = document.getElementById('contact-form');
 if (form) {
-  // Keep _replyto in sync with the email field
-  const emailInput = document.getElementById('email');
-  const replytoField = document.getElementById('replyto-field');
-  if (emailInput && replytoField) {
-    emailInput.addEventListener('input', () => {
-      replytoField.value = emailInput.value;
-    });
-  }
-
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.btn-submit');
     const toast = document.getElementById('toast');
-    const data = new FormData(form);
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
     try {
-      const res = await fetch(form.action, {
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
       });
 
       if (res.ok) {

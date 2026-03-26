@@ -107,17 +107,10 @@ header {
 }
 
 .logo-icon {
-  width: 28px;
-  height: 28px;
-  background: var(--accent);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 22px;
+  width: auto;
   flex-shrink: 0;
 }
-
-.logo-icon svg { width: 20px; height: 20px; }
 
 .btn-contact {
   background: var(--bg-card);
@@ -129,13 +122,34 @@ header {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
   transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-contact::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(137,254,155,0.18) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
 }
 
 .btn-contact:hover {
   background: rgba(137,254,155,0.08);
   border-color: rgba(137,254,155,0.4);
   box-shadow: 0 0 20px rgba(137,254,155,0.1);
+}
+
+@media (hover: hover) {
+  .btn-contact:hover::after { animation: shimmer-sweep 0.55s ease forwards; }
+}
+
+@media (hover: none) {
+  .btn-contact:active { opacity: 0.8; }
+  .btn-contact.shine-active::after { animation: shimmer-sweep 0.55s ease forwards; }
 }
 
 /* ─── GLOW BLOBS ──────────────────────── */
@@ -235,14 +249,35 @@ header {
   font-weight: 600;
   cursor: pointer;
   border: none;
+  position: relative;
+  overflow: hidden;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.25) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
 }
 
 .btn-primary:hover {
   background: var(--accent);
   transform: translateY(-1px);
   box-shadow: 0 8px 30px rgba(137,254,155,0.3);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover::after { animation: shimmer-sweep 0.55s ease forwards; }
+}
+
+@media (hover: none) {
+  .btn-primary:active { transform: scale(0.97); }
+  .btn-primary.shine-active::after { animation: shimmer-sweep 0.55s ease forwards; }
 }
 
 .btn-secondary {
@@ -278,14 +313,35 @@ header {
   font-weight: 600;
   cursor: pointer;
   border: none;
+  position: relative;
+  overflow: hidden;
   transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.15) inset, 0 4px 16px rgba(137,254,155,0.25);
+}
+
+.btn-accent::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
 }
 
 .btn-accent:hover {
   opacity: 0.9;
   transform: translateY(-1px);
   box-shadow: 0 0 0 1px rgba(255,255,255,0.2) inset, 0 6px 24px rgba(137,254,155,0.35);
+}
+
+@media (hover: hover) {
+  .btn-accent:hover::after { animation: shimmer-sweep 0.55s ease forwards; }
+}
+
+@media (hover: none) {
+  .btn-accent:active { transform: scale(0.97); }
+  .btn-accent.shine-active::after { animation: shimmer-sweep 0.55s ease forwards; }
 }
 
 .btn-ghost {
@@ -360,13 +416,37 @@ header {
   border: 1px solid rgba(137,254,155,0.12);
   border-radius: 10px;
   overflow: hidden;
+  display: block;
+  position: relative;
   transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.09) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
+  z-index: 3;
 }
 
 .project-card:hover {
   border-color: rgba(137,254,155,0.32);
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(137,254,155,0.12);
+}
+
+@media (hover: hover) {
+  .project-card:hover::after { animation: shimmer-sweep 0.65s ease forwards; }
+}
+
+@media (hover: none) {
+  .project-card:active { transform: scale(0.98); }
+  .project-card.shine-active::after { animation: shimmer-sweep 0.65s ease forwards; }
 }
 
 .project-thumb {
@@ -504,13 +584,35 @@ header {
   gap: 12px;
   text-align: left;
   flex: 1 1 160px;
+  position: relative;
+  overflow: hidden;
   transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.09) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
 }
 
 .service-card:hover {
   border-color: rgba(137,254,155,0.28);
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+@media (hover: hover) {
+  .service-card:hover::after { animation: shimmer-sweep 0.65s ease forwards; }
+}
+
+@media (hover: none) {
+  .service-card.shine-active::after { animation: shimmer-sweep 0.65s ease forwards; }
 }
 
 .service-icon {
@@ -623,14 +725,35 @@ header {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   overflow: hidden;
+  position: relative;
   box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
   transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+
+.featured-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.07) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
 }
 
 .featured-card:hover {
   border-color: rgba(137,254,155,0.2);
   transform: translateY(-3px);
   box-shadow: 0 16px 48px rgba(0,0,0,0.45);
+}
+
+@media (hover: hover) {
+  .featured-card:hover::after { animation: shimmer-sweep 0.65s ease forwards; }
+}
+
+@media (hover: none) {
+  .featured-card.shine-active::after { animation: shimmer-sweep 0.65s ease forwards; }
 }
 
 .featured-avatar-wrap {
@@ -688,6 +811,9 @@ header {
 }
 
 .featured-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   padding: 9px 16px;
   border-radius: 8px;
   font-size: 13px;
@@ -749,8 +875,12 @@ header {
   transition: none;
 }
 
-.tag-card:hover::after {
-  animation: shimmer-sweep 0.65s ease forwards;
+@media (hover: hover) {
+  .tag-card:hover::after { animation: shimmer-sweep 0.65s ease forwards; }
+}
+
+@media (hover: none) {
+  .tag-card.shine-active::after { animation: shimmer-sweep 0.65s ease forwards; }
 }
 
 @keyframes shimmer-sweep {
@@ -792,14 +922,36 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
   transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+
+.join-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.07) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
 }
 
 .join-card:hover {
   border-color: rgba(137,254,155,0.2);
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+@media (hover: hover) {
+  .join-card:hover::after { animation: shimmer-sweep 0.65s ease forwards; }
+}
+
+@media (hover: none) {
+  .join-card.shine-active::after { animation: shimmer-sweep 0.65s ease forwards; }
 }
 
 .join-card h3 {
@@ -936,15 +1088,36 @@ header {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
   transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
   box-shadow: 0 4px 20px rgba(137,254,155,0.25);
   margin-top: 8px;
+}
+
+.btn-submit::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  pointer-events: none;
 }
 
 .btn-submit:hover {
   opacity: 0.92;
   transform: translateY(-1px);
   box-shadow: 0 6px 28px rgba(137,254,155,0.35);
+}
+
+@media (hover: hover) {
+  .btn-submit:hover::after { animation: shimmer-sweep 0.55s ease forwards; }
+}
+
+@media (hover: none) {
+  .btn-submit:active { transform: scale(0.98); }
+  .btn-submit.shine-active::after { animation: shimmer-sweep 0.55s ease forwards; }
 }
 
 /* ─── FOOTER ──────────────────────────── */
