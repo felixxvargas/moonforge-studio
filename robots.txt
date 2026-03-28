@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moonforge.app/sitemap.xml
