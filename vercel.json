@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "moonforge.app" }],
+      "destination": "https://www.moonforge.app/:path*",
+      "permanent": true
+    }
+  ]
+}
